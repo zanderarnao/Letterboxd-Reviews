@@ -1,4 +1,4 @@
-A Word Frequency and Sentment Analysis of My Letterboxd Reviews
+An Analysis of My Letterboxd Reviews
 ================
 by Ye Watcher of Movies, Zander
 
@@ -12,9 +12,8 @@ and joined [Letterboxd](https://letterboxd.com/arnaoz/), the social
 network for movie people. The website has a host of very useful features
 like creating a watchlist, catalog of movie ratings (between .5 and 5
 stars), and reviews to share with your friends. According to the
-statistics on my dashboard, I have watched nearly 50 movies since the
-beginning of this year and rated an additional near-200 which I have
-seen in the past.
+statistics on my dashboard, I have watched over 50 movies since the
+beginning of this year and rated an additional 200.
 
 For later reference, taken from my Letterboxd profile, here is the
 distribution of my ratings.
@@ -32,7 +31,7 @@ name, my rating, and review text of [all
 61](https://letterboxd.com/arnaoz/films/reviews/) of the reviews I have
 left on Letterboxd.
 
-### Write a Function to Scrape Zander’s Movie Reviews
+### Write a Function to Scrape My Movie Reviews
 
 ------------------------------------------------------------------------
 
@@ -167,7 +166,7 @@ my_reviews %>% head(n = 5) %>% print()
   #print fucnction instead
 ```
 
-### An Exploratory Analysis of Zander’s Letterboxd Reviews
+### An Exploratory Analysis of My Letterboxd Reviews
 
 With my a tibble containing my reviews in hand, I move onto analysis.
 Before I move into sentiment analysis, it would likely be interesting to
@@ -236,7 +235,7 @@ I do not review every movie I watch, only those where I want to develop
 and share my thoughts further. It is clear to me now that those movies
 tend to be ones that I like.
 
-### A Word Frequency and Sentiment Analysis of Zander’s Letterboxd Reviews
+### A Word Frequency and Sentiment Analysis of My Letterboxd Reviews
 
 ------------------------------------------------------------------------
 
@@ -258,7 +257,8 @@ words_reviews <- my_reviews %>%
   anti_join(stop_words)
 
 # expand "Set3" color palette
-mycolors <- colorRampPalette(brewer.pal(12, "Set3"))(25)
+mycolors <- colorRampPalette(brewer.pal(12, "Set3"))(301
+                                                     )
 
 # create a word frequency graph
 words_reviews %>% 

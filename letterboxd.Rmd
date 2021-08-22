@@ -1,5 +1,5 @@
 ---
-title: "A Word Frequency and Sentment Analysis of My Letterboxd Reviews"
+title: "An Analysis of My Letterboxd Reviews"
 author: "by Ye Watcher of Movies, Zander"
 output: github_document
 github_document:
@@ -11,6 +11,7 @@ library(tidyverse)
 library(rvest)
 library(RColorBrewer)
 library(tidytext)
+library(textdata)
 library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -170,7 +171,8 @@ words_reviews <- my_reviews %>%
   anti_join(stop_words)
 
 # expand "Set3" color palette
-mycolors <- colorRampPalette(brewer.pal(12, "Set3"))(25)
+mycolors <- colorRampPalette(brewer.pal(12, "Set3"))(301
+                                                     )
 
 # create a word frequency graph
 words_reviews %>% 
